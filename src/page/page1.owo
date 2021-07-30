@@ -1,0 +1,209 @@
+<template lang="pug">
+.page-1
+  .img-show-box
+    a(href="#")
+      img.main(src="@|main.jpg|")
+      .text-show
+        h2 北京冬奥会延庆赛区“两馆一村”
+        h4 全部通过竣工验收
+  //- 轮播图
+  .swiper-conn-box
+    plug(_name="module12" _src="https://template.owo.ink/fe00f64632a3ffbb.owo")
+  ul.nav-bar.clear
+    li 新闻聚焦
+    li 新闻热点
+    li 新闻聚焦
+    li 新闻热点
+  .nav-box-list
+    .nav-box
+      .title 新闻聚焦
+      .news-card.image
+        h2 组图：北京延庆雨后呈现云海景观
+        img.show(src="http://www.people.com.cn/NMediaFile/2021/0730/MAIN202107301029421402326367101.jpg")
+        .bottom
+          p
+            a(href="#") 北京频道
+            | 本网特稿 | 滚动新闻
+          span.message
+          span.share
+      .news-card.no-image
+        h2 组图：北京延庆雨后呈现云海景观
+        .bottom
+          p
+            a(href="#") 北京频道
+            | 本网特稿 | 滚动新闻
+          span.message
+          span.share
+      .news-card.no-image
+        h2 组图：北京延庆雨后呈现云海景观
+        .bottom
+          p
+            a(href="#") 北京频道
+            | 本网特稿 | 滚动新闻
+          span.message
+          span.share
+      .news-card.video
+        h2 组图：北京延庆雨后呈现云海景观
+        video(src="https://cunchu.site/show/mp4/dandelion.mp4" controls="controls")
+        .bottom
+          p
+            a(href="#") 北京频道
+            | 本网特稿 | 滚动新闻
+          span.message
+          span.share
+</template>
+
+<script>
+  module.exports = {
+    created: function () {
+
+    }
+  }
+</script>
+
+
+<style lang="less">
+.img-show-box {
+  position: relative;
+  a {
+    display: block;
+  }
+  .main {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .text-show {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.66);
+    h2 {
+      color: white;
+      line-height: 30px;
+      font-size: 18px;
+    }
+    h4 {
+      color: white;
+      font-size: 14px;
+      line-height: 30px;
+      font-weight: normal;
+    }
+  }
+}
+.swiper-conn-box {
+  padding: 3vw 0;
+}
+.nav-bar {
+  li {
+    float: left;
+    width: 25%;
+    text-align: center;
+    font-size: 16px;
+    background-color: #e0e0e0;
+    line-height: 40px;
+    border-bottom: 2px solid #1439a3;
+  }
+}
+.nav-box-list {
+  .title {
+    background-image: url('@|line.png|');
+    background-repeat: no-repeat;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 18px;
+    font-size: 20px;
+    font-weight: bold;
+    background-size: auto 32px;
+    background-position: left center;
+    margin: 10px 0;
+  }
+  .nav-box {
+    width: 96%;
+    margin: 0 auto;
+  }
+}
+.news-card {
+  height: 90px;
+  position: relative;
+  padding-top: 10px;
+  border-bottom: 1px solid #ccc;
+  h2 {
+    line-height: 26px;
+    font-size: 18px;
+    width: calc(100% - 120px);
+  }
+  .show {
+    position: absolute;
+    max-width: 120px;
+    border-radius: 5px;
+    right: 0;
+    top: 15px;
+    margin: auto;
+    max-height: 90px;
+  }
+  .bottom {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 12px;
+    color: #8a8a8a;
+    background-image: url('@|icon3.png|');
+    padding-left: 14px;
+    background-size: 12px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    height: 20px;
+    a {
+      color: #8a8a8a;
+    }
+    span {
+      width: 20px;
+      display: inline-block;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      
+    }
+    p {
+      display: inline-block;
+      margin-right: 8px;
+    }
+    .message {
+      background-image: url('@|liuyan.png|');
+      background-size: 16px auto;
+    }
+    .share {
+      background-image: url('@|share.png|');
+      background-size: 14px auto;
+    }
+  }
+}
+.news-card.no-image {
+  height: auto;
+  padding-bottom: 40px;
+  h2 {
+    width: 100%;
+  }
+}
+.news-card.video {
+  h2 {
+    width: 100%;
+  }
+  video {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+  }
+  .bottom {
+    position: relative;
+    bottom: 0;
+  }
+}
+</style>
